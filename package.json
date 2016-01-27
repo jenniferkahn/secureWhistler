@@ -1,0 +1,23 @@
+{
+  "name": "securewhistler",
+  "version": "1.0.0",
+  "description": "A tip submission application that ensures the privacy of its users.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jenniferkahn/secureWhistler.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jenniferkahn/secureWhistler/issues"
+  },
+  "homepage": "https://github.com/jenniferkahn/secureWhistler#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "socket.io": "^1.4.5"
+  }
+}
