@@ -1,12 +1,5 @@
 # SecureWhistler Chat App |  1.0.0 βeta
-An encrypted chat app so an anonymous source stays anonymous.
-
-##Setup
-* `git clone` this repository
-* Install the npm dependencies, simply run `npm install`
-* Run `node server.js`
-
-
+An encrypted chat app built with node to ensure an anonymous source stays anonymous.
 
 ## Instructions
 This web application was built with Mongodb, Express, Socket.io, and Node.  In order to get this secure application to run, you'll need to download node - You can do that  [here](https://nodejs.org/en/).  
