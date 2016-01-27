@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SecureWhistler Chat | shhhh</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+	<script src="/js/jquery.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="/js/logic.js"></script>
+</head>
+<body>
+	<div class="container" style="position: relative;">
+		<div class="row">
+			<h1 class="muted">shadySecret Chat App</h1>
+			<hr>
+		</div>
+		<div class="row">
+			<div class="span9" style="width: 700px; overflow: auto; max-height: 450px;">
+				<table class="table table-bordered" id="msgLog" style="table-layout: fixed; word-wrap: break-word; ">
+					<thead>
+						<th style="width: 100px; table-layout:fixed">Whistleblower:</th>
+						<th>Tip:</th>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+			<div class="span9" style="padding-top: 30px;">
+				<textarea id="textEntry" placeholder="anonymous tip" style="table-layout: fixed; max-height: 100px; max-width: 690px; width: 690px"></textarea>
+				<button id="textButton" onclick="SendMessage();" value="Search">Submit Tip</button>
+			</div>
+			<div class="span3" style="position: absolute; left: 700px;">
+				<table class="table table-bordered" id="sidebar">
+					<thead>
+						<th>Whistler Alias:</th>
+					</thead>
+					<tbody>
+						<td class="form-inline">
+							<div class="input-append">
+								<input type="text" id="nameEntry" class="" style="width: 185px;" placeholder="Secret source aka Jennyfur">
+							</div>
+						</td>
+					</tbody>
+					<thead>
+						<th>Tip Channel:</th>
+					</thead>
+					<tbody>
+						<td class="form-inline">
+							Main Secret Chat Channel:
+							<div class="input-append" style="padding-bottom: 10px;">
+								<input type="text" id="channelEntry" class="" style="width: 185px;" placeholder="Main Tip Channel Name">
+							</div>
+							Sub Secret Chat Channel:
+							<div class="input-append">
+								<input type="text" id="subChannelEntry" class="" style="width: 185px;" placeholder="Sub Secret Chat Chanel Name">
+							</div>
+						</td>
+					</tbody>
+					<thead>
+						<th>Whistleblowers currently online:</th>
+					</thead>
+					<tbody>
+						<td id="connectedUsersCell">0</td>
+					</tbody>
+				</table>
+				<p><font color='green' size='5'>Dear Whistleblower: You can read everything sent in your main tIp Channel, even if you are in a sub secret channel, however other anonymous users who are not in your sub secret chat channel will not be able to read the messages you send.</font></p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
