@@ -1,51 +1,10 @@
-// var http = require('http');
-// var express = require('express');
-// var app = express();
-// var server = http.createServer(app);
-// var io = require('socket.io').listen(server);
-//
-//
-//
-//       app.set('port', 3000);
-//       app.use(express.static(__dirname + '/public'));
-//
-//
-//       app.get('/', function(req, res){
-//       	res.sendfile(__dirname + '/public/index.html');
-//       });
-//
-// // /* Configuration */
-// //
-// // require('./config/configuration.js')(app, mongoose);
-// //
-// //
-// // /* Models */
-// //
-// // Users = require('./models/Users.js');
-// // Messages = require('./models/Messages.js');
-// //
-// // /* Routes */
-// //
-// // require('./routes/chatPage.js')(app);
-// // require('./routes/login.js')(app);
-// // require('./routes/register.js')(app);
-// //
-// // /* Socket events */
-// //
-// // require('./lib/socketEvents/socketEvents.js')(io);
-//
-//
-// app.listen(app.get('port'));
-// console.log('Listening on port ', app.get('port'));
-
-
 var http = require('http');
 var express = require('express');
 var app = express();
 var server = http.createServer(app);
 var io = require('socket.io').listen(server);
 
-// // Defining configuration
+// Defining configuration
 // app.configure(function(){
 	app.set('port', 3000);
 	app.use(express.static(__dirname + '/public'));
