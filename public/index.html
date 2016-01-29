@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Whisper</title>
+	<title>SecureWhistler Chat App</title>
 
 	<!--Import Google Icon Font-->
 	      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -12,14 +12,14 @@
 	      <!--Let browser know website is optimized for mobile-->
 	      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
+				<link rel="stylesheet" type="text/css" href="css/style.css">
+				<script src="/js/jquery.min.js"></script>
 
-	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<script src="/js/jquery.min.js"></script>
+				<script src="/socket.io/socket.io.js"></script>
+				<script src="/js/logic.js"></script>
+			</head>
 
-	<script src="/socket.io/socket.io.js"></script>
-	<script src="/js/logic.js"></script>
-</head>
-<body>
+			<body>
 
 	<!--Import jQuery before materialize.js-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -27,33 +27,32 @@
 
 	<div class="container" style="position: relative;">
 		<div class="row">
-			<h1 class="muted">Whisper</h1>
+			<h1 class="muted">Secure Whistler Chat App </h1>
 			<hr>
 		</div>
 		<div class="row">
 			<div class="span9" style="width: 700px; overflow: auto; max-height: 450px;">
 				<table class="table table-bordered" id="msgLog" style="table-layout: fixed; word-wrap: break-word; ">
-					<thead>
-						<th style="width: 100px; table-layout:fixed">User</th>
-						<th>Message</th>
+					<thead>Secret:</th>
 					</thead>
 					<tbody>
 					</tbody>
 				</table>
+
 			</div>
 			<div class="span9" style="padding-top: 30px;">
-				<textarea id="textEntry" placeholder="Message" style="table-layout: fixed; max-height: 100px; max-width: 690px; width: 690px"></textarea>
-				<button id="textButton" onclick="SendMessage();" value="Search">Send message</button>
+				<textarea id="textEntry" placeholder="Tip" style="table-layout: fixed; max-height: 100px; max-width: 690px; width: 690px"></textarea>
+				<button id="textButton" onclick="SendMessage();" value="Search">Send Secret TIp</button>
 			</div>
 			<div class="span3" style="position: absolute; left: 700px;">
 				<table class="table table-bordered" id="sidebar">
 					<thead>
-						<th>Username:</th>
+						<th>User Alias:</th>
 					</thead>
 					<tbody>
 						<td class="form-inline">
 							<div class="input-append">
-								<input type="text" id="nameEntry" class="" style="width: 185px;" placeholder="James">
+								<input type="text" id="nameEntry" class="" style="width: 185px;" placeholder="">
 							</div>
 						</td>
 					</tbody>
@@ -79,7 +78,7 @@
 						<td id="connectedUsersCell">0</td>
 					</tbody>
 				</table>
-				<p><font color='grey' size='3'>You can read everything sent in your channel even if you are in a sub channel however others not in your sub channel cannot read the messages you send.</font></p>
+				<p><font color='grey' size='3'>You can read everything sent in your channel even if you are in a sub channel however others not in your sub channel cannot read the messages you send. The purpose of the app is to collect and share confidential information on an international scale.</font></p>
 			</div>
 		</div>
 	</div>
